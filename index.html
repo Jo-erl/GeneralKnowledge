@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-EDGE" />
     <meta
@@ -10,32 +10,62 @@
     <meta name="description" content="" />
     <meta name="keywords" content="html, css, javascript" />
     <meta name="author" content="Joel Anang" />
-    <title>True or False Challenge</title>
+    <title>Word Unscrambler</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="icon" href="favicon.png" type="image/x-icon" />
-</head>
-<body oncontextmenu="return false">
-    <div class="container">
-        <h1>
-            <img src="logo.png" alt="General Knowledge Icon" style="width:50px; height:auto; vertical-align: middle;" /> General Knowledge
-          </h1>
-           
-          <div class="question-container">
-            <p id="question">Question 1 / 3: Is the sky blue?</p>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body oncontextmenu="return false">
+    <div id="container">
+      <h1>
+        <img src="logo.png" alt="Word Unscrambler Icon" style="width:183px; height:auto;" /> Unscrambler
+      </h1>
+      
+      <div id="word-container">
+        <p id="unscramble-word">
+          <span id="category">Category: </span><br />
+          <span><strong></strong> <span id="scrambled-word"></span></span>
+        </p>
+        <input type="text" id="user-input" placeholder="Enter your answer" />
+
+        <div id="button-container">
+          <button id="submit-button">Submit</button>
+          <button id="skip-button">Skip</button>
         </div>
-        <div class="answer-buttons">
-            <button id="true-button" class="btn">True</button>
-            <button id="false-button" class="btn">False</button>
-        </div>
-        <div class="score">
-            <p id="score">Score: 0 / 3</p>
-            <p id="total">Total: 1 / 3</p>
-        </div>
+        
+        <!-- Add a score element -->
+<p id="current-score">Score: 0</p>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+
+    <!-- Add a div for the game over message within the container -->
+    <p id="game-over" style="display: none;">
+      Game Over! <strong>Refresh Page</strong>
+    </p>
+  </div>
+  <script src="script.js"></script>
+
+    <!--Footer-->
+    <section class="footer">
+      <p>
+        All Rights Reserved &copy; <span id="currentYear"></span>
+        <a
+          href="https://jo-erl.github.io/joelanangportfolio/"
+          style="color: rgb(0, 255, 68)"
+          target="_blank"
+          >JoErl</a
+        >
+      </p>
+
+      <script>
+        // JavaScript to automatically update the year
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+      </script>
+    </section>
+    <!--End of Footer-->
+  </body>
 </html>
