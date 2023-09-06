@@ -1,0 +1,85 @@
+/*=============== GOOGLE FONTS [POPPINS] ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+}
+
+.container {
+  text-align: center;
+  background-color: #ffffff46;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  border: 1px solid #ffffffc4;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.question-container {
+  background-color: #000000;
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding to give some spacing around the question text */
+  text-align: center; /* Center-align the text within the container */
+  text-overflow: ellipsis; /* Display an ellipsis (...) when text overflows */
+  margin-bottom: 20px;
+  color: #ff7000;
+  border-radius: 0 40px 0 40px;
+}
+
+.btn {
+  background-color: #0d0d0d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 20px 0 20px 0;
+}
+
+.btn:hover {
+  background-color: #000000;
+  color: #ff7000;
+}
+
+.answer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#total {
+  color: #6a6a6a;
+  font-weight: 400;
+}
+
+.score {
+  font-weight: bold;
+  color: #000000;
+}
