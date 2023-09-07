@@ -7,43 +7,25 @@ function shuffleArray(array) {
 }
 
 const questions = [
-  { text: "Is the sky blue?", answer: true },
+  { text: "The sky indigo", answer: false },
   { text: "The moon is made of cheese.", answer: false },
   { text: "Water boils at 100 degrees Celsius.", answer: true },
-  { text: "Paris is the capital of France.", answer: true },
-  {
-    text: "The Pacific Ocean is larger than the Atlantic Ocean.",
-    answer: true,
-  },
+  { text: "Paris is the capital of Belgium.", answer: false },
+  {text: "The Pacific Ocean is larger than the Atlantic Ocean.",answer: true,},
   { text: "There are 50 states in the United States.", answer: true },
-  { text: "There are 16 regions in the Ghana.", answer: true },
+  { text: "There are 25 regions in the Ghana.", answer: false },
   { text: "Pluto is still classified as a planet.", answer: false },
   { text: "The Nile River is the longest river in the world.", answer: true },
   { text: "DNA stands for Deoxyribonucleic Acid.", answer: true },
-  { text: "The first airplane flight was in 1903.", answer: true },
-  {
-    text: "The cruciate ligament is found in the knee.",
-    answer: true,
-  },
-  {
-    text: "Spaghetto is the singular form of the word spaghetti.",
-    answer: true,
-  },
-  {
-    text: "Pinocchio was Walt Disney’s first animated feature film in full color.",
-    answer: false,
-  },
+  { text: "The first airplane flight was in 1803.", answer: false },
+  {text: "The cruciate ligament is found in the knee.",answer: true,},
+  {text: "Spaghetto is the singular form of the word spaghetti.",answer: true,},
+  {text: "Pinocchio was Walt Disney’s first animated feature film in full color.",answer: false,},
   { text: "The capital of Australia is Sydney.", answer: false },
-  {
-    text: "The longest river in the world is the Amazon River.",
-    answer: false,
-  },
+  {text: "The longest river in the world is the Amazon River.",answer: false,},
   { text: "Bats are blind.", answer: false },
-  {
-    text: "The blue whale is the biggest animal to have ever lived.",
-    answer: true,
-  },
-  { text: "The Earth revolves around the Sun.", answer: true },
+  {text: "The blue whale is the biggest animal to have ever lived.",answer: true,},
+  { text: "The Earth revolves around the moon.", answer: false },
   { text: "Bananas are berries.", answer: true },
   { text: "Mount Everest is the tallest mountain in the world.", answer: true },
   { text: "Antarctica is the driest continent on Earth.", answer: true },
@@ -52,7 +34,7 @@ const questions = [
   { text: "A group of lions is called a pack.", answer: false },
   { text: "The Eiffel Tower is made of iron.", answer: true },
   { text: "Gold is a good conductor of electricity.", answer: true },
-  { text: "Venus is the hottest planet in our solar system.", answer: true },
+  { text: "Venus is the coldest planet in our solar system.", answer: false },
   { text: "The chemical symbol for water is H2O.", answer: true },
   { text: "Jupiter has the shortest day in the solar system.", answer: true },
   // Add more questions here
@@ -73,7 +55,7 @@ const totalElement = document.getElementById("total");
 
 // Initial score and total count display
 scoreElement.textContent = `Score: 0 / ${questions.length}`;
-totalElement.textContent = `Total: 0 / ${questions.length}`;
+totalElement.textContent = `Question: 0 / ${questions.length}`;
 
 function showQuestion() {
   if (currentQuestionIndex < questions.length) {
@@ -91,7 +73,7 @@ function showQuestion() {
     // Add the "Play Again" button
     const playAgainButton = document.createElement("button");
     playAgainButton.textContent = "Play Again";
-    playAgainButton.classList.add("btn");
+    playAgainButton.classList.add("btn2");
     playAgainButton.addEventListener("click", () => {
       // Reset the game and shuffle questions again
       currentQuestionIndex = 0;
@@ -99,7 +81,7 @@ function showQuestion() {
       shuffleArray(questions);
       showQuestion();
       scoreElement.textContent = `Score: 0 / ${questions.length}`;
-      totalElement.textContent = `Total: 0 / ${questions.length}`;
+      totalElement.textContent = `Question: 0 / ${questions.length}`;
       // Remove the "Play Again" button
       if (playAgainButton.parentNode) {
         playAgainButton.parentNode.removeChild(playAgainButton);
@@ -124,7 +106,7 @@ function displayResult(isCorrect) {
   scoreElement.textContent = `Score: ${correctAnswers} / ${questions.length}`;
 
   // Update the total count as the game progresses
-  totalElement.textContent = `Total: ${currentQuestionIndex + 1} / ${
+  totalElement.textContent = `Question: ${currentQuestionIndex + 1} / ${
     questions.length
   }`;
 
