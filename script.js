@@ -55,14 +55,15 @@ const totalElement = document.getElementById("total");
 
 // Initial score and total count display
 scoreElement.textContent = `Score: 0 / ${questions.length}`;
-totalElement.textContent = `Question: 0 / ${questions.length}`;
+totalElement.textContent = `Question: 1 / ${questions.length}`;
 
 function showQuestion() {
-  if (currentQuestionIndex < questions.length) {
+  if (currentQuestionIndex < questions.length || currentQuestionIndex === 0) {
     questionElement.textContent = `${questions[currentQuestionIndex].text}`;
     trueButton.style.display = "block";
     falseButton.style.display = "block";
     questionElement.style.color = "white"; // Reset text color
+    totalElement.textContent = `Question: ${currentQuestionIndex + 1} / ${questions.length}`;
   } else {
     // End of the game
     questionElement.textContent = "Game Over!";
@@ -81,7 +82,7 @@ function showQuestion() {
       shuffleArray(questions);
       showQuestion();
       scoreElement.textContent = `Score: 0 / ${questions.length}`;
-      totalElement.textContent = `Question: 0 / ${questions.length}`;
+      totalElement.textContent = `Question: 1 / ${questions.length}`;
       // Remove the "Play Again" button
       if (playAgainButton.parentNode) {
         playAgainButton.parentNode.removeChild(playAgainButton);
@@ -102,8 +103,11 @@ function displayResult(isCorrect) {
     questionElement.style.color = "red"; // Red for wrong answers
   }
 
+  // Calculate the score
+  const score = correctAnswers;
+
   // Update the score immediately
-  scoreElement.textContent = `Score: ${correctAnswers} / ${questions.length}`;
+  scoreElement.textContent = `Score: ${score} / ${questions.length}`;
 
   // Update the total count as the game progresses
   totalElement.textContent = `Question: ${currentQuestionIndex + 1} / ${
