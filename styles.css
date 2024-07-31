@@ -103,19 +103,10 @@ h1 {
   -webkit-tap-highlight-color: transparent; /* Remove blue highlighting on mobile */
 }
 /*=======================================================*/
-.btn:hover {
-  background-color: #000000;
-}
-/*=======================================================*/
 .btn:active,
 .btn2:active {
   background-color: #000000; /* Add a color for the active state */
   color: #fff;
-}
-/*=======================================================*/
-.btn2:hover {
-  background-color: #000000;
-  color: #ff7000;
 }
 /*=======================================================*/
 .answer-buttons {
@@ -145,6 +136,7 @@ h1 {
 #question {
   font-size: 18px;
   font-weight: 600;
+}
 /*=======================================================*/
 /*FOOTER*/
 .footer {
