@@ -29,7 +29,6 @@
   -ms-user-select: none;
   user-select: none;
 }
-}
 /*=======================================================*/
 html,
 body {
@@ -47,9 +46,6 @@ body {
   background-position: center;
   background-color: #f2f2f2;
   text-align: center;
-  user-select: none;
-  -webkit-user-select: none; /* For Safari */
-  -moz-user-select: none; /* For Firefox */
 }
 /*=======================================================*/
 .container {
