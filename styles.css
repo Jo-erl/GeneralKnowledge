@@ -17,14 +17,12 @@
   font-weight: 700; /* Extra weight */
 }
 /*=======================================================*/
-
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-
+/*=======================================================*/
 html,
 body {
   height: 100%;
@@ -32,9 +30,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+/*=======================================================*/
 body {
-  
+  font-family: "MTNBrighterSans", sans-serif;
   background-image: url(bg.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -45,7 +43,7 @@ body {
   -webkit-user-select: none; /* For Safari */
   -moz-user-select: none; /* For Firefox */
 }
-
+/*=======================================================*/
 .container {
   flex: 1;
   display: flex;
@@ -56,27 +54,30 @@ body {
   background-color: #ffffff7c;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(6px);
-  border: 1px solid #ffffffc4;
+  backdrop-filter: blur(10px);
 }
-
+/*=======================================================*/
 h1 {
-  font-size: 24px;
+  font-size: 40px;
   margin-bottom: 40px;
 }
-
+/*=======================================================*/
 .question-container {
   background-color: #000000;
-  width: 80%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add padding to give some spacing around the question text */
-  text-align: center; /* Center-align the text within the container */
-  text-overflow: ellipsis; /* Display an ellipsis (...) when text overflows */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  text-overflow: ellipsis;
   margin-bottom: 20px;
-  color: #ff7000;
   border-radius: 0 40px 0 40px;
 }
-
+/*=======================================================*/
+#question {
+  color: #ffbf5f;
+  font-size: 18px;
+  font-weight: 600;
+}
+/*=======================================================*/
 .btn {
   background-color: #0d0d0d;
   color: #fff;
@@ -88,7 +89,7 @@ h1 {
   width: 100px;
   border-radius: 20px 0 20px 0;
 }
-
+/*=======================================================*/
 .btn2 {
   background-color: #ff7000;
   color: #000000;
@@ -100,32 +101,50 @@ h1 {
   width: 100px;
   border-radius: 20px 0 20px 0;
 }
-
+/*=======================================================*/
 .btn:hover {
   background-color: #000000;
 }
-
+/*=======================================================*/
 .btn2:hover {
   background-color: #000000;
   color: #ff7000;
 }
-
+/*=======================================================*/
 .answer-buttons {
   display: flex;
   justify-content: center;
   gap: 5px;
 }
-
-#total {
-  color: #6a6a6a;
-  font-weight: 400;
-}
-
-.score {
-  font-weight: bold;
+/*=======================================================*/
+#score {
+  font-weight: 600;
   color: #000000;
+  font-size: 18px;
+  margin-top: 10px;
 }
-
+/*=======================================================*/
+#total {
+  font-weight: 600;
+  color: #ff7000;
+  background-color: #000000;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/*=======================================================*/
+#true-button,
+#false-button,
+#question {
+  font-size: 18px;
+  font-weight: 600;
+}
+/*=======================================================*/
+#true-button:hover,
+#false-button:hover {
+  background-color: #ff7000;
+  color: black !important;
+}
 /*=======================================================*/
 /*FOOTER*/
 .footer {
@@ -136,7 +155,7 @@ h1 {
   position: relative;
   width: 100%;
 }
-
+/*=======================================================*/
 .footer-content {
   position: relative;
   z-index: 2;
@@ -147,11 +166,12 @@ h1 {
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+/*=======================================================*/
 .footer.reveal .footer-content {
   opacity: 1;
   transform: translateY(0);
 }
-
+/*=======================================================*/
 .footer::before {
   content: "";
   position: absolute;
@@ -168,12 +188,12 @@ h1 {
   transform: rotate(45deg);
   z-index: 1;
 }
-
+/*=======================================================*/
 .footer-content {
   position: relative;
   z-index: 2;
 }
-
+/*=======================================================*/
 .logo a {
   font-size: 32px;
   font-weight: bold;
@@ -182,11 +202,11 @@ h1 {
   margin-bottom: 16px;
   display: inline-block;
 }
-
+/*=======================================================*/
 .logo span {
   color: red;
 }
-
+/*=======================================================*/
 .copyright {
   font-size: 15px;
   color: grey;
