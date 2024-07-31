@@ -100,10 +100,17 @@ h1 {
   cursor: pointer;
   width: 100px;
   border-radius: 20px 0 20px 0;
+  -webkit-tap-highlight-color: transparent; /* Remove blue highlighting on mobile */
 }
 /*=======================================================*/
 .btn:hover {
   background-color: #000000;
+}
+/*=======================================================*/
+.btn:active,
+.btn2:active {
+  background-color: #000000; /* Add a color for the active state */
+  color: #fff;
 }
 /*=======================================================*/
 .btn2:hover {
