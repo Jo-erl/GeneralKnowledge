@@ -145,13 +145,6 @@ h1 {
 #question {
   font-size: 18px;
   font-weight: 600;
-}
-/*=======================================================*/
-#true-button:hover,
-#false-button:hover {
-  background-color: #ff7000;
-  color: black !important;
-}
 /*=======================================================*/
 /*FOOTER*/
 .footer {
