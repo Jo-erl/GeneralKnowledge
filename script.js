@@ -11,20 +11,35 @@ const questions = [
   { text: "The moon is made of cheese.", answer: false },
   { text: "Water boils at 100 degrees Celsius.", answer: true },
   { text: "Paris is the capital of Belgium.", answer: false },
-  {text: "The Pacific Ocean is larger than the Atlantic Ocean.",answer: true,},
+  {
+    text: "The Pacific Ocean is larger than the Atlantic Ocean.",
+    answer: true,
+  },
   { text: "There are 50 states in the United States.", answer: true },
   { text: "There are 25 regions in the Ghana.", answer: false },
   { text: "Pluto is still classified as a planet.", answer: false },
   { text: "The Nile River is the longest river in the world.", answer: true },
   { text: "DNA stands for Deoxyribonucleic Acid.", answer: true },
   { text: "The first airplane flight was in 1803.", answer: false },
-  {text: "The cruciate ligament is found in the knee.",answer: true,},
-  {text: "Spaghetto is the singular form of the word spaghetti.",answer: true,},
-  {text: "Pinocchio was Walt Disney’s first animated feature film in full color.",answer: false,},
+  { text: "The cruciate ligament is found in the knee.", answer: true },
+  {
+    text: "Spaghetto is the singular form of the word spaghetti.",
+    answer: true,
+  },
+  {
+    text: "Pinocchio was Walt Disney’s first animated feature film in full color.",
+    answer: false,
+  },
   { text: "The capital of Australia is Sydney.", answer: false },
-  {text: "The longest river in the world is the Amazon River.",answer: false,},
+  {
+    text: "The longest river in the world is the Amazon River.",
+    answer: false,
+  },
   { text: "Bats are blind.", answer: false },
-  {text: "The blue whale is the biggest animal to have ever lived.",answer: true,},
+  {
+    text: "The blue whale is the biggest animal to have ever lived.",
+    answer: true,
+  },
   { text: "The Earth revolves around the moon.", answer: false },
   { text: "Bananas are berries.", answer: true },
   { text: "Mount Everest is the tallest mountain in the world.", answer: true },
@@ -62,12 +77,14 @@ function showQuestion() {
     questionElement.textContent = `${questions[currentQuestionIndex].text}`;
     trueButton.style.display = "block";
     falseButton.style.display = "block";
-    questionElement.style.color = "white"; // Reset text color
-    totalElement.textContent = `Question: ${currentQuestionIndex + 1} / ${questions.length}`;
+    questionElement.style.color = "white";
+    totalElement.textContent = `Question: ${currentQuestionIndex + 1} / ${
+      questions.length
+    }`;
   } else {
     // End of the game
     questionElement.textContent = "Game Over!";
-    questionElement.style.color = "white"; // Set text color to black
+    questionElement.style.color = "white";
     trueButton.style.display = "none";
     falseButton.style.display = "none";
 
@@ -117,7 +134,7 @@ function displayResult(isCorrect) {
   // Set the processing flag to false after a delay to allow the next question
   setTimeout(() => {
     isProcessing = false;
-  }, 1000); // Wait for 1.2 seconds before moving to the next question
+  }, 1000); // Wait for 1 second before moving to the next question
 }
 
 function checkAnswer(isTrue) {
@@ -133,7 +150,7 @@ function checkAnswer(isTrue) {
     setTimeout(() => {
       currentQuestionIndex++;
       showQuestion();
-    }, 1000); // Wait for 1.2 seconds before moving to the next question
+    }, 1000); // Wait for 1 second before moving to the next question
   }
 }
 
